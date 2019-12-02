@@ -6,10 +6,20 @@
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Books</h1>
         <div class="my-2 px-1">
-            <div><a href="#" class="btn-primary btn-sm">
-                    <i class="fas fa-plus-circle mr-1"></i>
-                    Add Book
-                </a></div>
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <a href="#" class="btn-primary btn-sm">
+                            <i class="fas fa-plus-circle mr-1"></i>
+                            Add Book
+                        </a>
+                    </div>
+                </div>
+                <div class="col-6 text-right">
+                    <span class="mr-2"><a href="#">Discount books</a> |</span>
+                    <span class="mr-2"><a href="#">Trash books</a></span>
+                </div>
+            </div>
         </div>
 
         <!-- DataTales Example -->

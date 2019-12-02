@@ -28,38 +28,35 @@
                 <h6 class="m-0 font-weight-bold text-primary">Categories list</h6>
             </div>
             <div class="card-body">
-                @if($authors->count())
+                @if($categories->count())
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
                                 <th>Action</th>
-                                <th>Photo</th>
                                 <th>Name</th>
                                 <th>Books Count</th>
-                                <th>Bio</th>
+                                <th>Create Date</th>
                             </tr>
                             </thead>
                             <tfoot>
                             <tr>
                                 <th>Action</th>
-                                <th>Photo</th>
                                 <th>Name</th>
                                 <th>Books Count</th>
-                                <th>Bio</th>
+                                <th>Create Date</th>
                             </tr>
                             </tfoot>
                             <tbody>
-                            @foreach($authors as $author)
+                            @foreach($categories as $category)
                                 <tr>
                                     <td>
                                         <a href="#"><i class="fas fa-edit"></i></a>
                                         <a href="#" class="text-danger"><i class="fas fa-trash"></i></a>
                                     </td>
-                                    <td><img src="{{$author->image? $author->image_url : $author->default_img}}" height="50" alt=""></td>
-                                    <td><a href="#">{{$author->name}}</a></td>
-                                    <td>{{$author->books->count()}}</td>
-                                    <td>{{str_limit($author->bio, 100)}}<a href="#">read more</a></td>
+                                    <td><a href="#">{{$category->name}}</a></td>
+                                    <td>{{$category->books->count()}}</td>
+                                    <td>{{$category->created_at? $category->created_at->diffForHumans(): '-'}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

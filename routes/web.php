@@ -31,6 +31,8 @@ Auth::routes();
 Route::group(['middleware' => 'admin'], function (){
     Route::get('/admin-home', 'Admin\AdminBaseController@index')->name('admin.home');
     Route::resource('/admin/books', 'Admin\AdminBooksController');
+    Route::resource('/admin/categories', 'Admin\AdminCategoriesController');
+    Route::resource('/admin/authors', 'Admin\AdminAuthorsController');
 });
 
 Route::group(['middleware' => 'user'], function (){

@@ -64,7 +64,7 @@ Bookshop - Book details
                         <div class="card card-body my-4">
                             <div class="author-description d-flex flex-row">
                                 <div class="author-img mr-4">
-                                    <img src="{{$book->author->image_url? $book->author->image_url : $book->default_img}}" alt="">
+                                    <img src="{{$book->author->image? $book->author->image_url : $book->default_img}}" alt="">
                                 </div>
                                 <div class="des">
                                     <h5><a href="{{route('author', $book->author->slug)}}">{{$book->author->name}}</a></h5>
