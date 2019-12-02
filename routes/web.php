@@ -30,6 +30,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'admin'], function (){
     Route::get('/admin-home', 'Admin\AdminBaseController@index')->name('admin.home');
+    Route::resource('/admin/books', 'Admin\AdminBooksController');
 });
 
 Route::group(['middleware' => 'user'], function (){
