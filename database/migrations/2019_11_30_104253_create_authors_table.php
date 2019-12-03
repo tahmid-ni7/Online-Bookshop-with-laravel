@@ -20,6 +20,8 @@ class CreateAuthorsTable extends Migration
             $table->string('slug');
             $table->text('bio')->nullable();
             $table->timestamps();
+
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
         });
     }
 

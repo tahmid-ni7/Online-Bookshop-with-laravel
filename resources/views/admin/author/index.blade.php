@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-6">
                     <div>
-                        <a href="#" class="btn-primary btn-sm">
+                        <a href="{{route('authors.create')}}" class="btn-primary btn-sm">
                             <i class="fas fa-plus-circle mr-1"></i>
                             Add Authors
                         </a>
@@ -21,6 +21,8 @@
                 </div>
             </div>
         </div>
+
+        @include('layouts.includes.flash-message')
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -53,8 +55,13 @@
                             @foreach($authors as $author)
                                 <tr>
                                     <td>
-                                        <a href="#"><i class="fas fa-edit"></i></a>
-                                        <a href="#" class="text-danger"><i class="fas fa-trash"></i></a>
+                                    {!! Form::open(['method'=>'DELETE', 'action'=>['Admin\AdminAuthorsController@destroy', $author->id]]) !!}
+                                        <div class="action d-flex flex-row">
+                                            <a href="{{route('authors.edit', $author->id)}}" class="btn-primary btn btn-sm mr-2"><i class="fas fa-edit"></i></a>
+
+                                            <button type="submit" onclick="return confirm('Author will delete permanently! Are you sure to delete??')" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                        </div>
+                                     {!! Form::close() !!}
                                     </td>
                                     <td><img src="{{$author->image? $author->image_url : $author->default_img}}" height="50" alt=""></td>
                                     <td><a href="#">{{$author->name}}</a></td>

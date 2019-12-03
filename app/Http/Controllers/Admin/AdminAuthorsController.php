@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Author;
+use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Intervention\Image\ImageManagerStatic as Photo;
 
 class AdminAuthorsController extends Controller
 {
@@ -15,7 +17,7 @@ class AdminAuthorsController extends Controller
      */
     public function index()
     {
-        $authors = Author::all();
+        $authors = Author::with('image')->orderBy('id', 'DESC')->get();
         return view('admin.author.index', compact('authors'));
     }
 
@@ -26,7 +28,7 @@ class AdminAuthorsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.author.create');
     }
 
     /**
@@ -37,7 +39,35 @@ class AdminAuthorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'name' => 'required',
+            'slug' => 'required|unique:authors',
+            'bio'  => 'required',
+            'image_id'=> 'image|max:500'
+        ];
+        $message = [
+            'image_id.image' => 'Image should be PNG, jpg, jpeg type'
+        ];
+        $this->validate($request, $rules, $message);
+
+        $input = $request->all();
+        if($file = $request->file('image_id'))
+        {
+            $name = time().$file->getClientOriginalName();
+
+            $image_resize = Photo::make($file->getRealPath());
+            $image_resize->resize(150,150);
+            $image_resize->save(public_path('assets/img/' .$name));
+
+            $image = Image::create(['file'=>$name]);
+            $input['image_id'] = $image->id;
+        }
+
+        $create_author = Author::create($input);
+        return redirect('/admin/authors')
+            ->with('success_message', 'Author created successfully');
+
+
     }
 
     /**
@@ -59,7 +89,8 @@ class AdminAuthorsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $author = Author::findOrFail($id);
+        return view('admin.author.edit', compact('author'));
     }
 
     /**
@@ -71,7 +102,34 @@ class AdminAuthorsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rules = [
+            'name' => 'required',
+            'slug' => 'required|unique:authors,slug,'.$id,
+            'bio'  => 'required',
+            'image_id'=> 'image|max:500'
+        ];
+        $message = [
+            'image_id.image' => 'Image should be PNG, jpg, jpeg type'
+        ];
+        $this->validate($request, $rules, $message);
+
+        $input = $request->all();
+        if($file = $request->file('image_id'))
+        {
+            $name = time().$file->getClientOriginalName();
+
+            $image_resize = Photo::make($file->getRealPath());
+            $image_resize->resize(150,150);
+            $image_resize->save(public_path('assets/img/' .$name));
+
+            $image = Image::create(['file'=>$name]);
+            $input['image_id'] = $image->id;
+        }
+
+        $author = Author::findOrFail($id);
+        $author->update($input);
+        return redirect('/admin/authors')
+            ->with('success_message', 'Author updated successfully');
     }
 
     /**
@@ -82,6 +140,17 @@ class AdminAuthorsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $author = Author::findOrFail($id);
+
+        if(! is_null($author->image_id))
+        {
+            unlink(public_path().'/assets/img/'.$author->image->file);
+        }
+        $author->books()->delete();
+        $author->image()->delete();
+        $author->delete();
+
+        return redirect()->back()
+            ->with('alert_message', "Author deleted successfully.");
     }
 }
