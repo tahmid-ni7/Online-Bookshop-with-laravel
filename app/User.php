@@ -45,6 +45,17 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Image');
     }
+    /*
+    * Image Accessor
+    */
+    public function getImageUrlAttribute($value)
+    {
+        return asset('/').'assets/img/'.$this->image->file;
+    }
+    public function getDefaultImgAttribute($value)
+    {
+        return asset('/').'assets/img/'.'user-placeholder.png';
+    }
 
 
     /*

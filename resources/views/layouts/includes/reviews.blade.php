@@ -4,9 +4,14 @@
             <h4 class="text-center mb-2"><i class="fas fa-comments"></i> 3 Reviews</h4>
             <div class="single-comment my-2">
                 <div class="card card-body bg-light">
-                    <div class="author-info mb-2">
-                        <h5>Tahmid Nishat</h5>
-                        <small><i class="fas fa-clock"></i> 2 days ago</small>
+                    <div class="author-info mb-2 d-flex flex-row">
+                        <div class="comment-user-img mr-3">
+                            <img src="{{asset('/').'assets/img/user-placeholder 3.png'}}" alt="" width="60">
+                        </div>
+                        <div>
+                            <h5>Tahmid Nishat</h5>
+                            <small><i class="fas fa-clock"></i> 2 days ago</small>
+                        </div>
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit libero iusto commodi vitae quod aut temporibus ut
                         eaque veniam molestiae!</p>
@@ -15,24 +20,32 @@
             </div>
             <div class="single-comment my-2">
                 <div class="card card-body bg-light">
-                    <div class="author-info mb-2">
-                        <h5>Tahmid Nishat</h5>
-                        <small><i class="fas fa-clock"></i> 2 days ago</small>
+                    <div class="author-info mb-2 d-flex flex-row">
+                        <div class="comment-user-img mr-3">
+                            <img src="{{asset('/').'assets/img/user-placeholder 3.png'}}" alt="" width="60">
+                        </div>
+                        <div>
+                            <h5>Tahmid Nishat</h5>
+                            <small><i class="fas fa-clock"></i> 2 days ago</small>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit libero iusto commodi vitae quod aut temporibus
-                        ut
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit libero iusto commodi vitae quod aut temporibus ut
                         eaque veniam molestiae!</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, nemo.</p>
                 </div>
             </div>
             <div class="single-comment my-2">
                 <div class="card card-body bg-light">
-                    <div class="author-info mb-2">
-                        <h5>Tahmid Nishat</h5>
-                        <small><i class="fas fa-clock"></i> 2 days ago</small>
+                    <div class="author-info mb-2 d-flex flex-row">
+                        <div class="comment-user-img mr-3">
+                            <img src="{{asset('/').'assets/img/user-placeholder 3.png'}}" alt="" width="60">
+                        </div>
+                        <div>
+                            <h5>Tahmid Nishat</h5>
+                            <small><i class="fas fa-clock"></i> 2 days ago</small>
+                        </div>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit libero iusto commodi vitae quod aut temporibus
-                        ut
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit libero iusto commodi vitae quod aut temporibus ut
                         eaque veniam molestiae!</p>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, nemo.</p>
                 </div>

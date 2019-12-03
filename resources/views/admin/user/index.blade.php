@@ -4,14 +4,14 @@
     <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Authors</h1>
+        <h1 class="h3 mb-2 text-gray-800">Users</h1>
         <div class="my-2 px-1">
             <div class="row">
                 <div class="col-6">
                     <div>
                         <a href="#" class="btn-primary btn-sm">
                             <i class="fas fa-plus-circle mr-1"></i>
-                            Add Authors
+                            Add user
                         </a>
                     </div>
                 </div>
@@ -25,10 +25,10 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Authors list</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Users list</h6>
             </div>
             <div class="card-body">
-                @if($authors->count())
+                @if($users->count())
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -36,8 +36,8 @@
                                 <th>Action</th>
                                 <th>Photo</th>
                                 <th>Name</th>
-                                <th>Books Count</th>
-                                <th>Bio</th>
+                                <th>Email</th>
+                                <th>Role</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -45,21 +45,21 @@
                                 <th>Action</th>
                                 <th>Photo</th>
                                 <th>Name</th>
-                                <th>Books Count</th>
-                                <th>Bio</th>
+                                <th>Email</th>
+                                <th>Role</th>
                             </tr>
                             </tfoot>
                             <tbody>
-                            @foreach($authors as $author)
+                            @foreach($users as $user)
                                 <tr>
                                     <td>
                                         <a href="#"><i class="fas fa-edit"></i></a>
                                         <a href="#" class="text-danger"><i class="fas fa-trash"></i></a>
                                     </td>
-                                    <td><img src="{{$author->image? $author->image_url : $author->default_img}}" height="50" alt=""></td>
-                                    <td><a href="#">{{$author->name}}</a></td>
-                                    <td>{{$author->books->count()}}</td>
-                                    <td>{{str_limit($author->bio, 100)}}<a href="#">read more</a></td>
+                                    <td><img src="{{$user->image? $user->image_url : $user->default_img}}" height="50" alt=""></td>
+                                    <td><a href="#">{{$user->name}}</a></td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{$user->role->name}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

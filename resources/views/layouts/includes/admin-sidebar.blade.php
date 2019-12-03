@@ -49,7 +49,7 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('authors.index')}}">Authors</a>
-                <a class="collapse-item" href="#">Users</a>
+                <a class="collapse-item" href="{{route('users.index')}}">Users</a>
             </div>
         </div>
     </li>

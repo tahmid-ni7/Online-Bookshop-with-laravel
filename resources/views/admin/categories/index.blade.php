@@ -37,6 +37,7 @@
                                 <th>Name</th>
                                 <th>Books Count</th>
                                 <th>Create Date</th>
+                                <th>Update Date</th>
                             </tr>
                             </thead>
                             <tfoot>
@@ -45,6 +46,7 @@
                                 <th>Name</th>
                                 <th>Books Count</th>
                                 <th>Create Date</th>
+                                <th>Update Date</th>
                             </tr>
                             </tfoot>
                             <tbody>
@@ -57,6 +59,7 @@
                                     <td><a href="#">{{$category->name}}</a></td>
                                     <td>{{$category->books->count()}}</td>
                                     <td>{{$category->created_at? $category->created_at->diffForHumans(): '-'}}</td>
+                                    <td>{{$category->updated_at? $category->updated_at->diffForHumans(): '-'}}</td>
                                 </tr>
                             @endforeach
                             </tbody>

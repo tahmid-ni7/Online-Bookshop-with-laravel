@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -17,31 +18,45 @@ class CategoriesTableSeeder extends Seeder
         DB::table('categories')->insert([
             [
                 'name' => 'Engineering',
-                'slug' => 'engineering'
+                'slug' => 'engineering',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'  => 'Sociology',
-                'slug'  => 'sociology'
+                'slug'  => 'sociology',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'  => 'Literature',
-                'slug'  => 'literature'
+                'slug'  => 'literature',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'  => 'Business Studies',
-                'slug'  => 'business-studies'
+                'slug'  => 'business-studies',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'  => 'Economics',
-                'slug'  => 'economics'
+                'slug'  => 'economics',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'   => 'Medical',
-                'slug'   => 'medical'
+                'slug'   => 'medical',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ],
             [
                 'name'  => 'Text Books',
-                'slug'  => 'text-books'
+                'slug'  => 'text-books',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now()
             ]
         ]);
     }

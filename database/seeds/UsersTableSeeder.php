@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
             [
                 'name'=>'Tahmid Nishat',
                 'email'=>'tahmid.ni7@gmail.com',
-                'password'=> bcrypt('262188'),
+                'password'=> bcrypt('12345'),
                 'role_id'=> 1,
                 'is_active'=> 1
             ],
