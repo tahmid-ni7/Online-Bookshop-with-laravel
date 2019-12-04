@@ -30,6 +30,14 @@ Auth::routes();
 
 Route::group(['middleware' => 'admin'], function (){
     Route::get('/admin-home', 'Admin\AdminBaseController@index')->name('admin.home');
+
+    Route::put('/admin/books/restore/{id}', ['uses' => 'Admin\AdminBooksController@restore'])
+        ->name('book.restore');
+    Route::delete('admin/books/forceDelete/{id}', ['uses' => 'Admin\AdminBooksController@forceDelete'])
+        ->name('book.forceDelete');
+
+    Route::get('/trash-books', 'Admin\AdminBooksController@trashBooks')->name('admin.trash-books');
+
     Route::resource('/admin/books', 'Admin\AdminBooksController');
     Route::resource('/admin/categories', 'Admin\AdminCategoriesController');
     Route::resource('/admin/authors', 'Admin\AdminAuthorsController');
