@@ -20,6 +20,15 @@ a.logo-img img {
     width: 28px;
     height: 28px;
 }
+span.image-circle img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+nav#nav-top {
+    min-height: 50px;
+}
 .shopping-cart {
     position: relative;
 }

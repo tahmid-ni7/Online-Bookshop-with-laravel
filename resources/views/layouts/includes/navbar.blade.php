@@ -29,7 +29,10 @@
                     </li>
                 @else
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">{{Auth::user()->name}}</a>
+                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">
+                            <span class="image-circle"><img src="{{Auth::user()->image? Auth::user()->image_url:Auth::user()->default_img}}" width="30" alt=""></span>
+                            {{Auth::user()->name}}
+                        </a>
                         <div class="dropdown-menu">
                             @if(Auth::user()->role->name == "Admin")
                                 <a class="dropdown-item" href="{{route('admin.home')}}">
