@@ -15,9 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
+    protected $fillable = ['name', 'email', 'password', 'role_id', 'image_id', 'is_active'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -54,7 +52,7 @@ class User extends Authenticatable
     }
     public function getDefaultImgAttribute($value)
     {
-        return asset('/').'assets/img/'.'user-placeholder.png';
+        return asset('/').'assets/img/'.'user-placeholder 3.png';
     }
 
 

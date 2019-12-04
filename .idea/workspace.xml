@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e2a5180-ae66-4788-8d06-64711ce0faa9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/myshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAuthorsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAuthorsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_11_30_104253_create_authors_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_11_30_104253_create_authors_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/author/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/author/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/author/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/author/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/author/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/author/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminUsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/admin-topbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/admin-topbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/navbar.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +184,9 @@
       <workItem from="1575200111432" duration="50000" />
       <workItem from="1575200414931" duration="16825000" />
       <workItem from="1575264964739" duration="42578000" />
-      <workItem from="1575354267979" duration="32820000" />
+      <workItem from="1575354267979" duration="32869000" />
+      <workItem from="1575405173326" duration="108000" />
+      <workItem from="1575441473406" duration="9611000" />
     </task>
     <servers />
   </component>

@@ -31,12 +31,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">{{Auth::user()->name}}</a>
                         <div class="dropdown-menu">
-                            @if(Auth::user()->role_id == 1)
+                            @if(Auth::user()->role->name == "Admin")
                                 <a class="dropdown-item" href="{{route('admin.home')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-muted"></i>
                                     Profile
                                 </a>
-                            @elseif(Auth::user()->role_id == 3)
+                            @elseif(Auth::user()->role->name == "User")
                                 <a class="dropdown-item" href="{{route('user.home')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-muted"></i>
                                     Profile
