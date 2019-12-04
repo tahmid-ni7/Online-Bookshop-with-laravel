@@ -89,12 +89,6 @@ class AdminBooksController extends AdminBaseController
         return redirect()->back()->with('alert_message', 'Book move to trash');
     }
 
-    public function trashBooks()
-    {
-        $books = Book::onlyTrashed()->get();
-        return view('admin.books.trash-books', compact('books'));
-    }
-
     public function restore($id)
     {
         $trash = Book::onlyTrashed()->findOrFail($id);
@@ -114,6 +108,22 @@ class AdminBooksController extends AdminBaseController
         $trash_book->forceDelete();
         return redirect()->back()
             ->with('alert_message', 'Book deleted permanently');
+    }
+
+    public function trashBooks()
+    {
+        $books = Book::onlyTrashed()->orderBy('id', 'DESC')->get();
+        return view('admin.books.trash-books', compact('books'));
+    }
+
+    public function discountBooks()
+    {
+        $discount_books = "All books with discount";
+        $books = Book::with('author', 'category')
+            ->orderBy('discount_rate', 'DESC')
+            ->where('discount_rate', '>', 0)->get();
+
+        return view('admin.books.index', compact('books', 'discount_books'));
     }
 
 

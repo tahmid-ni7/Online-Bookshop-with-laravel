@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e2a5180-ae66-4788-8d06-64711ce0faa9" name="Default Changelist" comment="" />
+    <list default="true" id="5e2a5180-ae66-4788-8d06-64711ce0faa9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminBooksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/books/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/books/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/books/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/books/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/books/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/books/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/books/trash-books.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/books/trash-books.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/includes/admin-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/includes/admin-sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +185,7 @@
       <workItem from="1575264964739" duration="42578000" />
       <workItem from="1575354267979" duration="32869000" />
       <workItem from="1575405173326" duration="108000" />
-      <workItem from="1575441473406" duration="26689000" />
+      <workItem from="1575441473406" duration="33090000" />
     </task>
     <servers />
   </component>

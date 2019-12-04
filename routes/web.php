@@ -31,12 +31,13 @@ Auth::routes();
 Route::group(['middleware' => 'admin'], function (){
     Route::get('/admin-home', 'Admin\AdminBaseController@index')->name('admin.home');
 
-    Route::put('/admin/books/restore/{id}', ['uses' => 'Admin\AdminBooksController@restore'])
+    Route::put('/admin/books/restore/{id}', 'Admin\AdminBooksController@restore')
         ->name('book.restore');
-    Route::delete('admin/books/forceDelete/{id}', ['uses' => 'Admin\AdminBooksController@forceDelete'])
+    Route::delete('admin/books/forceDelete/{id}', 'Admin\AdminBooksController@forceDelete')
         ->name('book.forceDelete');
-
-    Route::get('/trash-books', 'Admin\AdminBooksController@trashBooks')->name('admin.trash-books');
+    Route::get('/trash-books', 'Admin\AdminBooksController@trashBooks')
+        ->name('admin.trash-books');
+    Route::get('admin/discount-books', 'Admin\AdminBooksController@discountBooks')->name('admin.discountBooks');
 
     Route::resource('/admin/books', 'Admin\AdminBooksController');
     Route::resource('/admin/categories', 'Admin\AdminCategoriesController');

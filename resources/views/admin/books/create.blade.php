@@ -36,7 +36,7 @@
 
                 <div class="form-group">
                     {!! Form::label('description') !!}
-                    {!! Form::textarea('description', null, ['class'=>'form-control '.($errors->has('description')? 'is-invalid': ''), 'rows'=>5]) !!}
+                    {!! Form::textarea('description', null, ['class'=>'form-control '.($errors->has('description')? 'is-invalid': ''), 'rows'=>10]) !!}
                     @if($errors->has('description'))
                         <span class="invalid-feedback">
                             <strong>{{$errors->first('description')}}</strong>

@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-6 text-right">
                     <span class="mr-2"><a href="{{route('books.index')}}">All books</a> |</span>
-                    <span class="mr-2"><a href="#">Discount books</a> |</span>
+                    <span class="mr-2"><a href="{{route('admin.discountBooks')}}">Discount books</a> |</span>
                     <span class="mr-2"><a href="{{route('admin.trash-books')}}">Trash books</a></span>
                 </div>
             </div>

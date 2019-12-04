@@ -16,12 +16,16 @@
                     </div>
                 </div>
                 <div class="col-6 text-right">
-                    <span class="mr-2"><a href="#">Discount books</a> |</span>
+                    <span class="mr-2"><a href="{{route('books.index')}}">All books</a> |</span>
+                    <span class="mr-2"><a href="{{route('admin.discountBooks')}}">Discount books</a> |</span>
                     <span class="mr-2"><a href="{{route('admin.trash-books')}}">Trash books</a></span>
                 </div>
             </div>
         </div>
 
+        @if(isset($discount_books))
+            <div class="alert alert-primary"><strong>{{$discount_books}}</strong></div>
+        @endif
         @include('layouts.includes.flash-message')
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -31,7 +35,7 @@
             <div class="card-body">
                 @if($books->count())
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                         <tr>
                             <th>Action</th>
