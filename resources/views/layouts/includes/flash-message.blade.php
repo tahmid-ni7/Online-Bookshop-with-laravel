@@ -15,3 +15,7 @@
 @if(session('alert_message'))
     <div class="alert alert-danger">{{session('alert_message')}}</div>
 @endif
+
+@if(session('cart_alert'))
+    <div class="text-danger my-2"><strong>{{session('cart_alert')}}</strong></div>
+@endif

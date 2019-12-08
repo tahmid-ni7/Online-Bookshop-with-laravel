@@ -43,6 +43,7 @@
                             <th>Title</th>
                             <th>Category</th>
                             <th>Author</th>
+                            <th>Regular Price</th>
                             <th>Discount</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -55,6 +56,7 @@
                             <th>Title</th>
                             <th>Category</th>
                             <th>Author</th>
+                            <th>Regular Price</th>
                             <th>Discount</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -76,6 +78,7 @@
                             <td><a href="{{route('books.edit', $book->id)}}">{{$book->title}}</a></td>
                             <td>{{$book->category->name}}</td>
                             <td>{{$book->author->name}}</td>
+                            <td>{{$book->init_price}}</td>
                             <td>{{$book->discount_rate}}%</td>
                             <td>{{$book->price}}</td>
                             <td>{{$book->quantity}}</td>

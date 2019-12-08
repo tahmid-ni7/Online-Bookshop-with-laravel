@@ -32,6 +32,12 @@ nav#nav-top {
 .shopping-cart {
     position: relative;
 }
+span.quantity-input {
+    display: inline-block;
+    border: 1px solid #F8F9FA;
+    border-radius: 5px;
+    background: #F8F9FA;
+}
 
 .shopping-cart .count-cart {
     position: absolute;
@@ -148,4 +154,21 @@ ul.ctg-list a:hover {
 }
 .book-tag a {
     font-size: 16px;
+}
+span.quantity-input a {
+    display: inline-block;
+    background: #F8F9FA;
+    padding: 2px 12px;
+    color: #333;
+    font-size: 18px;
+}
+
+span.quantity-input input {
+    border: none;
+    width: 45px;
+    text-align: center;
+    padding: 6px 0;
+}
+span.quantity-input input:focus{
+    outline: none;
 }

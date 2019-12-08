@@ -49,9 +49,21 @@ Bookshop - Book details
                                             <a href="{{route('category', $book->category->slug)}}" class="mr-4"><i class="fas fa-folder"></i> {{$book->category->name}}</a>
                                             <a href="#review-section" class="mr-4"><i class="fas fa-comments"></i> Reviews</a>
                                         </div>
-                                        <div class="cart">
-                                            <a href="#" class="btn btn-danger btn-sm"><i class="fas fa-shopping-cart"></i> Add to cart</a>
-                                        </div>
+
+                                        <form action="{{route('cart.add')}}" method="post">
+                                            @csrf
+                                            <div class="cart">
+                                            <span class="quantity-input mr-2 mb-2">
+                                                <a href="#" class="cart-minus" id="cart-minus">-</a>
+                                                <input title="QTY" name="quantity" type="text" value="1" class="qty-text">
+                                                <a href="#" class="cart-plus" id="cart-plus">+</a>
+                                            </span>
+                                                <input type="hidden" name="book_id" value="{{$book->id}}">
+
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+                                            </div>
+                                        </form>
+                                        @include('layouts.includes.flash-message')
                                     </div>
                                 </div>
                                 <div class="row">

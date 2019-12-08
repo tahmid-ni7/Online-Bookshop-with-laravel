@@ -39,8 +39,10 @@
             </div>
             <div class="col-md-4">
                 <div class="shopping-cart text-right">
-                    <a href="#" class="text-danger"><i class="fas fa-shopping-cart fa-2x m-1"></i>
-                        <span class="count-cart">5</span>
+                    <a href="{{route('cart')}}" class="text-danger"><i class="fas fa-shopping-cart fa-2x m-1"></i>
+                        @if(Cart::content()->count())
+                            <span class="count-cart">{{Cart::content()->count()}}</span>
+                        @endif
                     </a>
 
                 </div>

@@ -40,6 +40,7 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Author</th>
+                                <th>Regular price</th>
                                 <th>Discount</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
@@ -52,6 +53,7 @@
                                 <th>Title</th>
                                 <th>Category</th>
                                 <th>Author</th>
+                                <th>Regular price</th>
                                 <th>Discount</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
@@ -67,7 +69,7 @@
                                         {!! Form::close() !!}
 
                                         {!! Form::open(['method'=>'DELETE', 'route'=>['book.forceDelete', $book->id]]) !!}
-                                            <button type="submit" onclick="return confirm('Book will delete to permanently! Are you sure to delete??')" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                            <button type="submit" onclick="return confirm('Book will delete to permanently! Are you sure to delete??')" class="btn btn-sm btn-danger"><i class="fas fa-times"></i></button>
                                         {!! Form::close() !!}
                                     </div>
 
@@ -76,6 +78,7 @@
                                     <td><a href="#">{{$book->title}}</a></td>
                                     <td>{{$book->category->name}}</td>
                                     <td>{{$book->author->name}}</td>
+                                    <td>{{$book->init_price}}</td>
                                     <td>{{$book->discount_rate}}%</td>
                                     <td>{{$book->price}}</td>
                                     <td>{{$book->quantity}}</td>
