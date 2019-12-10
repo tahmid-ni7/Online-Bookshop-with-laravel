@@ -63,7 +63,7 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('orders.index')}}">
             <i class="fas fa-fw fa-shopping-basket"></i>
             <span>Orders</span></a>
     </li>

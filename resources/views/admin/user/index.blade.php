@@ -38,6 +38,7 @@
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Total orders</th>
                                 <th>Role</th>
                             </tr>
                             </thead>
@@ -47,6 +48,7 @@
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Total orders</th>
                                 <th>Role</th>
                             </tr>
                             </tfoot>
@@ -65,6 +67,7 @@
                                     <td><img src="{{$user->image? $user->image_url : $user->default_img}}" height="50" alt=""></td>
                                     <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
                                     <td>{{$user->email}}</td>
+                                    <td>{{$user->orders->count()}}</td>
                                     <td>{{$user->role->name}}</td>
                                 </tr>
                             @endforeach

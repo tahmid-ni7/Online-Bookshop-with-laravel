@@ -57,6 +57,7 @@ Route::group(['middleware' => 'admin'], function (){
     Route::resource('/admin/categories', 'Admin\AdminCategoriesController');
     Route::resource('/admin/authors', 'Admin\AdminAuthorsController');
     Route::resource('/admin/users', 'Admin\AdminUsersController');
+    Route::resource('/admin/orders', 'Admin\AdminOrdersController');
 });
 // End of admin route
 

@@ -146,8 +146,8 @@ class AdminAuthorsController extends Controller
         {
             unlink(public_path().'/assets/img/'.$author->image->file);
         }
-        $author->books()->delete();
         $author->image()->delete();
+        $author->books()->delete();
         $author->delete();
 
         return redirect()->back()
