@@ -15,7 +15,7 @@ class UsersBaseController extends Controller
 
     public function index()
     {
-        return view('layouts.user-master');
+        return view('public.users.profile');
     }
 
 }

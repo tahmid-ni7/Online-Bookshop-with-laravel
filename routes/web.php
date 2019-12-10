@@ -30,6 +30,11 @@ Route::get('/cart/page', 'ShoppingCartController@cart')->name('cart');
 Route::get('/cart/delete/{id}', 'ShoppingCartController@cart_delete')->name('cart.delete');
 Route::get('/cart/increment/{id}/{qty}/{book_id}', 'ShoppingCartController@cart_increment')->name('cart.increment');
 Route::get('/cart/decrement/{id}/{qty}', 'ShoppingCartController@cart_decrement')->name('cart.decrement');
+
+Route::get('/cart/checkout', 'CheckoutController@index')->name('cart.checkout');
+Route::post('/cart/proceed', 'CheckoutController@store')->name('cart.proceed');
+Route::get('/cart/payment', 'CheckoutController@show')->name('cart.payment');
+Route::post('/cart/checkout', 'CheckoutController@pay')->name('cart.checkout');
 // End of cart route
 
 Auth::routes();
@@ -58,6 +63,8 @@ Route::group(['middleware' => 'admin'], function (){
 // Users route group
 Route::group(['middleware' => 'user'], function (){
     Route::get('/user-home', 'Users\UsersBaseController@index')->name('user.home');
+    Route::get('/my-orders', 'Users\UserOrdersController@myOrders')->name('user.orders');
+    Route::get('/order/details/{id}', 'Users\UserOrdersController@order_details')->name('order.details');
 });
 // End of users route
 

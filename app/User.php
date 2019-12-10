@@ -43,6 +43,10 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Image');
     }
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
     /*
     * Image Accessor
     */

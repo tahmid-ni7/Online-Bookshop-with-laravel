@@ -27,13 +27,13 @@
         <div class="collapse navbar-collapse" id="nav-collapse">
             <ul class="navbar-nav">
                 <li class="nav-item px-2">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="{{route('bookshop.home')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item px-2">
                     <a href="{{route('all-books')}}" class="nav-link">Books</a>
                 </li>
                 <li class="nav-item px-2">
-                    <a href="#discount-books" class="nav-link">Discount's Books</a>
+                    <a href="{{route('discount-books')}}" class="nav-link">Discount's Books</a>
                 </li>
                 <li class="nav-item px-2">
                     <a href="#" class="nav-link">About</a>
@@ -82,8 +82,7 @@
                                 activities</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Reviews</a>
-                                <a class="dropdown-item" href="#">Orders</a>
-                                <a class="dropdown-item" href="#">Pruducts</a>
+                                <a class="dropdown-item" href="{{route('user.orders')}}">Orders</a>
                             </div>
                         </li>
                     </ul>
@@ -91,8 +90,10 @@
             </div>
             <div class="col-md-4">
                 <div class="shopping-cart text-right">
-                    <a href="#" class="text-danger"><i class="fas fa-shopping-cart fa-2x m-1"></i>
-                        <span class="count-cart">5</span>
+                    <a href="{{route('cart')}}" class="text-danger"><i class="fas fa-shopping-cart fa-2x m-1"></i>
+                        @if(Cart::content()->count())
+                            <span class="count-cart">{{Cart::content()->count()}}</span>
+                        @endif
                     </a>
 
                 </div>
@@ -101,6 +102,8 @@
     </div>
 </section>
 <!-- HEADER END -->
+
+@yield('content')
 
 <footer class="py-3 text-center border-top bg-light">
     <div class="container">

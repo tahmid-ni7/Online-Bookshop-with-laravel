@@ -9,11 +9,11 @@
     </div>
 @endif
 @if(session('success_message'))
-    <div class="alert alert-info">{{session('success_message')}}</div>
+    <div class="alert alert-info my-3">{{session('success_message')}}</div>
 @endif
 
 @if(session('alert_message'))
-    <div class="alert alert-danger">{{session('alert_message')}}</div>
+    <div class="alert alert-danger my-3">{{session('alert_message')}}</div>
 @endif
 
 @if(session('cart_alert'))

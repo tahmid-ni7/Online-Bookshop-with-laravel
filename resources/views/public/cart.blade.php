@@ -54,7 +54,9 @@
                     </tr>
                     <tr>
                         <td colspan="4"></td>
-                        <td colspan="2"><a href="#" class="btn btn-outline-danger btn-sm">Checkout <i class="fas fa-long-arrow-alt-right"></i></a></td>
+                        <td colspan="2">
+                            <a href="{{route('cart.checkout')}}" class="btn btn-outline-danger btn-sm">Checkout <i class="fas fa-long-arrow-alt-right"></i></a>
+                        </td>
                     </tr>
                 </tbody>
                 </table>

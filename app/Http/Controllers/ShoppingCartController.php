@@ -36,7 +36,7 @@ class ShoppingCartController extends Controller
         }
         else {
             return redirect()->back()
-                ->with('cart_alert', "We don't have that much quantity. We have ".$book->quantity." books in stock");
+                ->with('cart_alert', "We don't have that much quantity.");
         }
 
     }

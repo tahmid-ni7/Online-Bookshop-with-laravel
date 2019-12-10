@@ -27,7 +27,7 @@ Bookshop - Book details
                                         <div class="author mb-2">
                                             By <a href="{{route('author', $book->author->slug)}}">{{$book->author->name}}</a>
                                         </div>
-                                        @if(!is_null($book->quantity))
+                                        @if(($book->quantity) > 1)
                                             <div class="badge badge-success mb-2">In Stock</div>
                                         @else
                                             <div class="badge badge-danger mb-2">out of Stock</div>

@@ -733,11 +733,11 @@ for (var func in conversions) {
   // export rgb2hsl and ["rgb"]["hsl"]
   convert[from] = convert[from] || {};
 
-  convert[from][to] = convert[func] = (function(func) { 
+  convert[from][to] = convert[func] = (function(func) {
     return function(arg) {
       if (typeof arg == "number")
         arg = Array.prototype.slice.call(arguments);
-      
+
       var val = conversions[func](arg);
       if (typeof val == "string" || val === undefined)
         return val; // keyword
@@ -765,12 +765,12 @@ Converter.prototype.routeSpace = function(space, args) {
    }
    // color.rgb(10, 10, 10)
    if (typeof values == "number") {
-      values = Array.prototype.slice.call(args);        
+      values = Array.prototype.slice.call(args);
    }
 
    return this.setValues(space, values);
 };
-  
+
 /* Set the values for a space, invalidating cache */
 Converter.prototype.setValues = function(space, values) {
    this.space = space;
@@ -1102,7 +1102,7 @@ function getAlpha(string) {
 // generators
 function hexString(rgba, a) {
    var a = (a !== undefined && rgba.length === 3) ? a : rgba[3];
-   return "#" + hexDouble(rgba[0]) 
+   return "#" + hexDouble(rgba[0])
               + hexDouble(rgba[1])
               + hexDouble(rgba[2])
               + (
@@ -3177,7 +3177,7 @@ helpers$1.extend(DatasetController.prototype, {
 		var dataset = me.getDataset();
 		var data = dataset.data || (dataset.data = []);
 
-		// In order to correctly handle data addition/deletion animation (an thus simulate
+		// In users to correctly handle data addition/deletion animation (an thus simulate
 		// real-time charts), we need to monitor these data modifications and synchronize
 		// the internal meta data accordingly.
 		if (me._data !== data) {
@@ -5811,7 +5811,7 @@ core_defaults._set('scatter', {
 var controller_scatter = controller_line;
 
 // NOTE export a map in which the key represents the controller type, not
-// the class, and so must be CamelCase in order to be correctly retrieved
+// the class, and so must be CamelCase in users to be correctly retrieved
 // by the controller in core.controller.js (`controllers[meta.type]`).
 
 var controllers = {
@@ -8005,7 +8005,7 @@ var exports$3 = core_element.extend({
 				y1 = ptY + height;
 				y2 = y1 + caretSize;
 				y3 = y1;
-				// invert drawing order
+				// invert drawing users
 				var tmp = x3;
 				x3 = x1;
 				x1 = tmp;
@@ -13789,7 +13789,7 @@ var Legend = core_element.extend({
 	initialize: function(config) {
 		helpers$1.extend(this, config);
 
-		// Contains hit boxes for each dataset (in dataset order)
+		// Contains hit boxes for each dataset (in dataset users)
 		this.legendHitBoxes = [];
 
 		/**
@@ -14300,7 +14300,7 @@ var Title = core_element.extend({
 		var me = this;
 		helpers$1.extend(me, config);
 
-		// Contains hit boxes for each dataset (in dataset order)
+		// Contains hit boxes for each dataset (in dataset users)
 		me.legendHitBoxes = [];
 	},
 
