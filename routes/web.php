@@ -24,6 +24,8 @@ Route::get('/author/{author}', 'BookshopHomeController@author')->name('author');
 
 Route::get('/book/{book}', 'BookshopHomeController@bookDetails')->name('book-details');
 
+Route::post('/book/{book}/review', 'ReviewsController@store')->name('book.review');
+
 // Cart Route
 Route::post('/cart/add', 'ShoppingCartController@add_to_cart')->name('cart.add');
 Route::get('/cart/page', 'ShoppingCartController@cart')->name('cart');

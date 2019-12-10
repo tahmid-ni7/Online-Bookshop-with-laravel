@@ -24,6 +24,10 @@ class Book extends Model
     {
         return $this->belongsTo('App\Image');
     }
+    public function reviews()
+    {
+        return $this->hasMany('App\Review');
+    }
 
 
     public function scopeLatestFirst($query)

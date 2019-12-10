@@ -77,6 +77,7 @@ class BookshopHomeController extends Controller
     public function bookDetails($id)
     {
         $book = Book::findOrFail($id);
-        return view('public.book-details' , compact('book'));
+        $book_reviews = $book->reviews()->latest()->get();
+        return view('public.book-details' , compact('book', 'book_reviews'));
     }
 }
