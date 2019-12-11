@@ -1,7 +1,7 @@
 # Online Bookshop with laravel
  This is an online bookshop project with laravel 5.8, bootstrap 4, javaScript and jquery. In this project I use [**stripe payment**](https://stripe.com/) system, and [**Laravel Shoppingcart**](https://github.com/bumbummen99/LaravelShoppingcart) for maintaining the user orders and payments. This project has many other cool functionality, like as **Data table** and so on.
  
- # Key Features
+ ## Key Features
  
  ### Users
  
