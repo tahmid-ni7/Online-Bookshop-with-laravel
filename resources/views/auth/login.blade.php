@@ -45,7 +45,7 @@
                                     <button type="submit" class="btn btn-success btn-block btn-md">Login</button>
                                 </div>
                             </form>
-                            <small>Don't have an account? <a href="#">Register here</a></small>
+                            <small>Don't have an account? <a href="{{route('register')}}">Register here</a></small>
                         </div>
                     </div>
                 </div>
