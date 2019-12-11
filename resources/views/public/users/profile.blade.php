@@ -22,7 +22,7 @@
                 <div class="card card-body my-3">
                     <h6>Activities</h6>
                     <p><a href="{{route('user.orders')}}" class="mr-2"><i class="fas fa-shopping-basket mr-1"></i> Orders</a> {{Auth::user()->orders? Auth::user()->orders->count(): 'No order yet'}}</p>
-                    <p><a href="#" class="mr-2"><i class="fas fa-comments mr-1"></i> Reviews</a> 0</p>
+                    <p><a href="{{route('user.reviews')}}" class="mr-2"><i class="fas fa-comments mr-1"></i> Reviews</a> {{Auth::user()->reviews? Auth::user()->reviews->count(): 'No review yet'}}</p>
                 </div>
             </div>
         </div>

@@ -68,6 +68,9 @@ Route::group(['middleware' => 'user'], function (){
     Route::get('/user-home', 'Users\UsersBaseController@index')->name('user.home');
     Route::get('/my-orders', 'Users\UserOrdersController@myOrders')->name('user.orders');
     Route::get('/order/details/{id}', 'Users\UserOrdersController@order_details')->name('order.details');
+
+    Route::get('/my-reviews', 'Users\UserReviewsController@myReviews')->name('user.reviews');
+    Route::delete('/review-delete/{id}', 'Users\UserReviewsController@deleteReview')->name('review.delete');
 });
 // End of users route
 

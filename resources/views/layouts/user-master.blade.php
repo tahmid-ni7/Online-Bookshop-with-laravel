@@ -81,7 +81,7 @@
                             <a class="nav-link text-danger" href="#" data-toggle="dropdown"><i class="fas fa-cog"></i> Your
                                 activities</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Reviews</a>
+                                <a class="dropdown-item" href="{{route('user.reviews')}}">Reviews</a>
                                 <a class="dropdown-item" href="{{route('user.orders')}}">Orders</a>
                             </div>
                         </li>
