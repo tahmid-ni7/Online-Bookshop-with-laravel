@@ -3,8 +3,10 @@
  
  ## Key Features
  
+ 
  Users
  -----
+ 
  - Users can search the books by book title and author name.
  - Filter the books by category and author
  - User can buy the books
@@ -14,6 +16,7 @@
  
  Admin
  ----
+ 
  - Basically admin manages the all activities of the application
  - Admin can add & delete user, author, category, and books.
  - Admin can accept or reject the user orders.
@@ -21,12 +24,14 @@
  
  Others
  ----
+ 
  - Multiple secured login and registration, Use middleware route group for admin and users
  - Use database seeder
  - Secured payment system with stripe.
  
  Development
  ----
+ 
  This project developed with
  - [Laravel](https://laravel.com/)
  - [Bootstrap-4](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
@@ -37,6 +42,7 @@
  - [Laravel ShoppingCart](https://github.com/bumbummen99/LaravelShoppingcart)
  
  ## Getting started
+ 
  After cloning the project, you have follow as the way how other laravel projects run.
  For running the project you have to follow these instructions below
  
