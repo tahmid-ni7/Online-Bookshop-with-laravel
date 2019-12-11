@@ -3,9 +3,7 @@
  
  ## Key Features
  
- 
- Users
- -----
+ ### Users
  
  - Users can search the books by book title and author name.
  - Filter the books by category and author
@@ -14,23 +12,19 @@
  - User can see their orders and reviews from the user panel.
  - Registration
  
- Admin
- ----
- 
+ ### Admin 
  - Basically admin manages the all activities of the application
  - Admin can add & delete user, author, category, and books.
  - Admin can accept or reject the user orders.
  - Admin has control over the book reviews and so on.
  
- Others
- ----
+ ### Others
  
  - Multiple secured login and registration, Use middleware route group for admin and users
  - Use database seeder
  - Secured payment system with stripe.
  
- Development
- ----
+ ### Development
  
  This project developed with
  - [Laravel](https://laravel.com/)
@@ -60,6 +54,7 @@
 Now this project is ready to run. For admin, Email `admin@bookshop.com` password `secret`. For user, Email `user@bookshop.com` password `secret`.
  
  ___If you would find any error or issue you can mention in issues or raise a pull request.___
+ 
 ***
 ##### &copy; [Tahmid Nishat](http://tahmid-ni7.github.io/portfolio)
 `Full-stack web developer & CS Engineer`

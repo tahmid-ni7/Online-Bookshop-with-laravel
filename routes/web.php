@@ -60,6 +60,7 @@ Route::group(['middleware' => 'admin'], function (){
     Route::resource('/admin/authors', 'Admin\AdminAuthorsController');
     Route::resource('/admin/users', 'Admin\AdminUsersController');
     Route::resource('/admin/orders', 'Admin\AdminOrdersController');
+    Route::resource('/admin/reviews', 'Admin\AdminReviewsController');
 });
 // End of admin route
 

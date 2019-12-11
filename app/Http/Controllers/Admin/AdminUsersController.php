@@ -168,6 +168,7 @@ class AdminUsersController extends Controller
         }
         $user->image()->delete();
         $user->orders()->delete();
+        $user->reviews()->delete();
         $user->delete();
         return redirect()->back()
             ->with('alert_message', 'User deleted successfully');
